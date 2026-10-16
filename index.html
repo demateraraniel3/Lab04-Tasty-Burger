@@ -1,10 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tasty Burger</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,39 +13,42 @@
     <!-- HEADER -->
     <header>
         <div class="header-container">
-
-            <img src="images/logo.png" alt="Tasty Burger" class="logo">
+            <a href="#about" class="logo-link">
+                <img src="images/logo.png" alt="Tasty Burger" class="logo">
+            </a>
 
             <nav>
-                <a href="#">ABOUT</a>
-                <a href="#">OUR MENU</a>
-                <a href="#">SHOP</a>
-                <a href="#">CONTACT</a>
-                <span class="cart">🛒<sup>2</sup></span>
-            </nav>
+                <a href="#about">ABOUT</a>
+                <a href="#menu">OUR MENU</a>
+                <a href="#menu">SHOP</a>
+                <a href="#contact">CONTACT</a>
 
+                <button class="cart" id="cart-button" type="button"
+                        aria-label="Open shopping cart">
+                    🛒 <sup id="cart-count">0</sup>
+                </button>
+            </nav>
         </div>
     </header>
 
-
     <!-- MAIN CONTENT -->
-    <main>
-
+    <main id="about">
         <h1>OUR CRAZY BURGERS</h1>
 
         <p class="description">
-            Get ready for a wild ride of flavors! Our crazy burgers are loaded with juicy
-            patties, bold toppings, and irresistible sauces, all stacked on a perfectly
-            toasted bun. Whether you like it cheesy, or extra meaty, we've got a burger
-            that will blow your mind!
+            Get ready for a wild ride of flavors! Our crazy burgers are loaded
+            with juicy patties, bold toppings, and irresistible sauces, all
+            stacked on a perfectly toasted bun. Whether you like it cheesy,
+            or extra meaty, we've got a burger that will blow your mind!
         </p>
 
-
         <!-- BURGER CARDS -->
-        <section class="burger-container">
+        <section class="burger-container" id="menu">
 
-            <div class="burger-card">
-                <img src="images/crispy-chicken.jpg" alt="Crispy Chicken">
+            <!-- CRISPY CHICKEN -->
+            <article class="burger-card">
+                <img src="images/crispy-chicken.jpg"
+                     alt="Crispy Chicken burger">
 
                 <div class="card-info">
                     <div class="stars">★★★★★</div>
@@ -56,14 +59,24 @@
                         pickles, coleslaw
                     </p>
 
-                    <span class="price">₱99.15</span>
-                    <span class="heart">♡</span>
+                    <div class="card-actions">
+                        <span class="price">₱99.15</span>
+
+                        <button class="heart" type="button"
+                                aria-label="Favorite Crispy Chicken"
+                                aria-pressed="false">♡</button>
+
+                        <button class="add-to-cart" type="button">
+                            Add to Cart
+                        </button>
+                    </div>
                 </div>
-            </div>
+            </article>
 
-
-            <div class="burger-card">
-                <img src="images/ultimate-bacon.jpg" alt="Ultimate Bacon">
+            <!-- ULTIMATE BACON -->
+            <article class="burger-card">
+                <img src="images/ultimate-bacon.jpg"
+                     alt="Ultimate Bacon burger">
 
                 <div class="card-info">
                     <div class="stars">★★★★★</div>
@@ -74,14 +87,24 @@
                         onion, mustard
                     </p>
 
-                    <span class="price">₱99.32</span>
-                    <span class="heart">♡</span>
+                    <div class="card-actions">
+                        <span class="price">₱99.32</span>
+
+                        <button class="heart" type="button"
+                                aria-label="Favorite Ultimate Bacon"
+                                aria-pressed="false">♡</button>
+
+                        <button class="add-to-cart" type="button">
+                            Add to Cart
+                        </button>
+                    </div>
                 </div>
-            </div>
+            </article>
 
-
-            <div class="burger-card">
-                <img src="images/black-sheep.jpg" alt="Black Sheep">
+            <!-- BLACK SHEEP -->
+            <article class="burger-card">
+                <img src="images/black-sheep.jpg"
+                     alt="Black Sheep burger">
 
                 <div class="card-info">
                     <div class="stars">★★★★☆</div>
@@ -92,14 +115,24 @@
                         avocado, lettuce, red onion
                     </p>
 
-                    <span class="price">₱69.15</span>
-                    <span class="heart">♡</span>
+                    <div class="card-actions">
+                        <span class="price">₱69.15</span>
+
+                        <button class="heart" type="button"
+                                aria-label="Favorite Black Sheep"
+                                aria-pressed="false">♡</button>
+
+                        <button class="add-to-cart" type="button">
+                            Add to Cart
+                        </button>
+                    </div>
                 </div>
-            </div>
+            </article>
 
-
-            <div class="burger-card">
-                <img src="images/vegan-burger.jpg" alt="Vegan Burger">
+            <!-- VEGAN BURGER -->
+            <article class="burger-card">
+                <img src="images/vegan-burger.jpg"
+                     alt="Vegan Burger">
 
                 <div class="card-info">
                     <div class="stars">★★★☆☆</div>
@@ -110,14 +143,59 @@
                         onion, mustard
                     </p>
 
-                    <span class="price">₱99.25</span>
-                    <span class="heart">♡</span>
+                    <div class="card-actions">
+                        <span class="price">₱99.25</span>
+
+                        <button class="heart" type="button"
+                                aria-label="Favorite Vegan Burger"
+                                aria-pressed="false">♡</button>
+
+                        <button class="add-to-cart" type="button">
+                            Add to Cart
+                        </button>
+                    </div>
                 </div>
-            </div>
+            </article>
 
         </section>
-
     </main>
 
+    <!-- CONTACT -->
+    <footer id="contact">
+        <h2>Contact Tasty Burger</h2>
+        <p>Thank you for visiting Tasty Burger!</p>
+    </footer>
+
+    <!-- SHOPPING CART PANEL -->
+    <div class="cart-overlay" id="cart-overlay" hidden>
+        <section class="cart-modal"
+                 role="dialog"
+                 aria-modal="true"
+                 aria-labelledby="cart-title">
+
+            <div class="cart-header">
+                <h2 id="cart-title">Your Shopping Cart</h2>
+
+                <button id="close-cart" class="close-cart"
+                        type="button" aria-label="Close cart">×</button>
+            </div>
+
+            <div id="cart-items">
+                <p class="empty-cart">Your cart is empty.</p>
+            </div>
+
+            <div class="cart-footer">
+                <h3>Total: <span id="cart-total">₱0.00</span></h3>
+
+                <button id="checkout-button" class="checkout-button"
+                        type="button" disabled>
+                    Checkout
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
 </body>
 </html>
